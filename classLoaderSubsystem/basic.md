@@ -13,7 +13,7 @@
 ## Internal Structure
 
 
-￼![jvmByteCodeImg](./imageDir/jvmByteCodeImg.png)
+￼![jvmByteCodeImg](../imageDir/jvmByteCodeImg.png)
 
 
 
@@ -21,7 +21,7 @@
 ## Process
 
 
-￼![jvmByteCodeImg](./imageDir/classLoadProcess.png)
+￼![jvmByteCodeImg](../imageDir/classLoadProcess.png)
 
 
 ### Loading
