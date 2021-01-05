@@ -43,23 +43,32 @@
 
 * Verify
 
-        Every .class file, which can be recognized by JVM, must begin with "CA FE BA BE", to keep safe of JVM
-        file format verification
-        meta data verification
-        byte code verification
-        symbolic reference verification
+        * Every .class file, which can be recognized by JVM, must begin with "CA FE BA BE", to keep safe of JVM
+        * To verify: file format, file meta data, byte code, symbolic reference
         
         
-* Prepare
+* Prepare  -- set default for class static variable & initialize final static variable, exclude instance variable
+
+        * Set default value for class variable as "zero" value (not value assigned)
+        * Initialize class variable declared by "final" key word, because all the variables declared by "final" are all set default during compilation process
+        * Not initialize instance variable, class variables will be assigned in method area, instance variable will be assigned in heap along with object
         
 
 * Resolve
 
+        * TBD
 
 
 
 
-### Initializatoin
+### Initializatoin -- initialize static variable value & static block
+
+    * Execute <clinit> method
+    * Initialize static variable value and static block
+    * JVM ensures a class's <cliinit> method is executed synchroously in multi-thread env
+    
+    
+
 
 
 
