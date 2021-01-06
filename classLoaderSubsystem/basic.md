@@ -28,7 +28,7 @@
 
 * get binary stream of .class from class name
 * transfer static storage of class represented by stream into runtime data structure in method area
-* create an instance of java.lang.Class for this class, as interface to be accessed by other objects
+* create an object of java.lang.Class (not instance) for this class, as interface to be accessed by other objects
 
 
         ### Loading Source
