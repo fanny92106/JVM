@@ -52,5 +52,7 @@ local variable -- must get instantialized before using it, else compiler will co
 
 
 
+## 动态链接 (dynamic linking)
 
+* Java源文件被compile到字节码文件时，所有常量，变量和方法的引用都被作为符号引用 （symbolic reference) 保存在class文件的constant pool中，便于指令识别，介绍文件size
 
