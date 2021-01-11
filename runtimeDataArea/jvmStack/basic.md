@@ -32,7 +32,8 @@
 
 ## 局部变量表 (local variables)
 
-* 最小的存储单元是槽 (slot)
+* 用数组在实现，最小的存储单元是槽 (slot)
+* 局部变量：方法参数，本地（局部）变量
 * 局部变量必须在声明时显式赋值
 member variable
     class variable -- get default value when loading it, get initialized during class loading initialization process
@@ -40,3 +41,16 @@ member variable
 local variable -- must get instantialized before using it, else compiler will complain
 * 栈帧中，与JVM性能调优最为密切的就是局部变量表。局部变量表越大，栈帧越大，一个栈中可以入栈的栈帧数量越少，given一个指定的栈大小
 * 局部变量表的变量也是垃圾回收(GC)的根节点，被局部变量表中直接或间接引用的对象都不会被回收
+
+
+
+## 操作数栈 (operand stack)
+
+* 用数组实现，主要用于保存计算过程的j中间结果，同时作为计算过程中变量临时的存储空间
+* 如果被调用的方法带有返回值，其返回值会被压入当前栈帧的操作数栈中，并更新pc register下一条要执行的字节码指令
+* 栈顶缓存技术 (top-of-stack cache): 为了解决频繁地对操作数栈入栈/出栈的操作，HotSpot JVM的设计者提出将栈顶元素全部缓存在物理CPU的寄存器中，以此降低对内存读/写的次数，提升执行引擎的执行效率
+
+
+
+
+
