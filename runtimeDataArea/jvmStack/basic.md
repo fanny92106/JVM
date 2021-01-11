@@ -21,11 +21,22 @@
 
 
 
-## 栈的内部结构
+## 栈帧 (stack frame) 的内部结构
 
-* 本地变量表 (local variables)
+* 局部变量表 (local variables)
 * 操作数栈 (operand stack)
 * 动态链接 (dynamic linking)
 * 方法返回地址 (return address)
 
 
+
+## 局部变量表 (local variables)
+
+* 最小的存储单元是槽 (slot)
+* 局部变量必须在声明时显式赋值
+member variable
+    class variable -- get default value when loading it, get initialized during class loading initialization process
+    instance variable -- get initialized in heap when class instance get initialized
+local variable -- must get instantialized before using it, else compiler will complain
+* 栈帧中，与JVM性能调优最为密切的就是局部变量表。局部变量表越大，栈帧越大，一个栈中可以入栈的栈帧数量越少，given一个指定的栈大小
+* 局部变量表的变量也是垃圾回收(GC)的根节点，被局部变量表中直接或间接引用的对象都不会被回收
