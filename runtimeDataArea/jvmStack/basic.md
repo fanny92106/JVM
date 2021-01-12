@@ -56,3 +56,37 @@ local variable -- must get instantialized before using it, else compiler will co
 
 * Java源文件被compile到字节码文件时，所有常量，变量和方法的引用都被作为符号引用 （symbolic reference) 保存在class文件的constant pool中，便于指令识别，介绍文件size
 
+
+
+## 虚方法 vs 非虚方法
+
+* 非虚方法: 在编译时就确定了具体的调用版本，这个版本在运行时是不可变的(不能有runtime override), 这样的方法称为非虚方法
+* 例如：static method, private method, final method, constructor method (构造器不能被继承，每个类只能有一个), parent class method
+* 其他的都是虚方法
+
+
+
+## 方法调用 (method call)
+
+* 静态调用 (static link/ early bounding) : compile时确定具体执行的方法，这个版本在运行时是不可变的，将symbolic reference转化成direct reference； 这样的方法叫非虚方法 (non-virtual method), 与c++对应
+* 动态调用 (dynamic link/ late bounding) : runtime时才能具体确定所要执行的方法，同上; 这样的方法叫 (virtual method)
+
+
+
+## 虚拟机提供的方法调用指令
+
+### 普通调用指令: 
+* invokestatic: 调用x静态方法  -- 静态链接
+* invokespecial: 调用<init>方法，私有方法，指定的父类方法  -- 静态链接
+* invokevirtual: 调用所有虚方法 （除了final， 因为被final修饰了的方法属于静态链接)
+* invokeinterface: 调用接口方法
+
+### 动态调用指令: java7
+* invokedynamic: 动态解析出需要调用的方法。然后执行
+
+
+
+
+
+
+
