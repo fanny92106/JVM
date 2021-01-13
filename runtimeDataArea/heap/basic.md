@@ -12,6 +12,9 @@
 
 ## Structure
 * Young Generation
+    * Eden (几乎所有Java对象都是在Eden区被new出来的)
+    * Survivor0
+    * Survivor1
 * Tenure Generation
 (
 * Permaneng Genenration in jdk 7
@@ -31,3 +34,11 @@ Idea 里面的 run/ edit config来配置运行参数
 * XX: PrintGCDetails 显示和GC相关的内存heap中不同代使用大小
 * XX: NewRatio=2 设置新生代于老年代的比例，默认值是2； 一般情况下无需修改
 * XX: SurvivorRatio=8 设置新生代中Eden区和另外两个Survivor空间的占比，默认值是8：1：1
+
+
+
+
+## GC
+
+* 频繁在新生区收集，较少在养老区收集，几乎不在永久区/元空间收集
+
