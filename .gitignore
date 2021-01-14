@@ -3,3 +3,7 @@
 
 # compiled .class file (byte code)
 out/
+
+# other folder/file
+
+*.DS_Store
