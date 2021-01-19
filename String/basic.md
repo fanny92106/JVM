@@ -62,3 +62,32 @@
         String s6 = "test";
         String s7 = s4 + s6;     // s4 和 s6 为拼接变量, s7 为 new String()
         s1 == s7 (false)
+
+    !!! StringBuilder() 由于会有扩容操作，所以如果已知StringBuilder要append多少内容，就直接new StringBuilder( int: capacity ), 以防止后期反复扩容，降低效率
+
+
+
+
+## String的 intern( ) 方法
+
+* 如何保证变量s指向的是字符串变量池中的数据？
+
+    方法一：字符串字面量
+    String s = "abc";
+
+    方法二: 使用intern( )方法
+    String s = new String("abc").intern();
+    String s = new StringBuilder("abc").intern();
+
+
+* 总结: String的intern( ) 的使用：
+
+        jdk1.6中，将这个字符串对象尝试放入串池 (String Pool)
+            1. 如果串池里有，则不会放入。返回已有串池中的对象地址
+            2. 如果没有，会把此对象复制一份，放入串池，并返回串池中的对象地址
+        
+        jdk1.7起，将这个字符串对象尝试放入串池。
+            1. 如果串池里有，则不会放入。返回已有串池中的对象地址
+            2. 如果没有，则会把对象的引用地址(即heap中串池之外的地址)复制一份，放入串池，并返回串池中的引用地址
+            
+        ![internMethod](imagePool/intern.png)
