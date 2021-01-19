@@ -1,4 +1,4 @@
-#  Class Loader Systems
+#  Class Loader Subystem
 
 
 
@@ -13,7 +13,7 @@
 ## Internal Structure
 
 
-￼![jvmByteCodeImg](../imageDir/jvmByteCodeImg.png)
+￼![jvmByteCodeImg](imagePool/jvmByteCodeImg.png)
 
 
 
@@ -21,7 +21,7 @@
 ## Process
 
 
-￼![jvmByteCodeImg](../imageDir/classLoadProcess.png)
+￼![jvmByteCodeImg](imagePool/classLoadProcess.png)
 
 
 ### Loading

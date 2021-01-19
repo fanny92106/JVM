@@ -32,7 +32,7 @@
 
 ### JVM - Parent Delegation Model for Java Class Loading Mechanism
 
-￼![Image of classFileImg](../imageDir/classLoadHierarchy.png)
+￼![Image of classFileImg](imagePool/classLoadHierarchy.png)
 
     * Delegation (bottom-up) : After receive class loading request, the class loader will delegate it to the direct parent class loader, then the parent classs loader will do the same thing until reaching the top class loader (Bootstrap class loader)
     * Loading (top-down) : from the top class loader, if the class is within the class loader's loading capacity, it will load it, else it will pass down (reverse delegate) the mission to its child class loader

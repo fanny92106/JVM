@@ -39,4 +39,4 @@
         * 类本身的属性
 * Padding
     
-    ￼![Image of objectStructure](../../../imageDir/objectStructure.png)
+    ￼![Image of objectStructure](imagePool/objectStructure.png)

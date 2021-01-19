@@ -56,15 +56,15 @@
 * 如果方法区无法满足新的内存分配需求时，将抛出OOM异常
 
 
-￼![jdk6_methodArea](../../imageDir/jdk6_methodArea.png)
+￼![jdk6_methodArea](imagePool/jdk6_methodArea.png)
 
                       ||
                       
-￼![jdk7_methodArea](../../imageDir/jdk7_methodArea.png)
+￼![jdk7_methodArea](imagePool/jdk7_methodArea.png)
                         
                       ||
 
-￼![jdk8_methodArea](../../imageDir/jdk8_methodArea.png)
+￼![jdk8_methodArea](imagePool/jdk8_methodArea.png)
 
 
 

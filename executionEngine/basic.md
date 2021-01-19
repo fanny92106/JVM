@@ -4,7 +4,7 @@
 
 JVM 是半解释半编译的，既有解释器又有编译器 (JIT Compiler  )  ---- 指的完全是执行引擎，和javac 的前端编译完全无关！！！
 
-￼![ExecutionEngineInterpreteAndJITCompile](../imageDir/ExecutionEngineInterpreteAndJITCompile.png)
+￼![ExecutionEngineInterpreteAndJITCompile](imagePool/ExecutionEngineInterpreteAndJITCompile.png)
 
 
 ## Interpreter: 

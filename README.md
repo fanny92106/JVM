@@ -43,14 +43,14 @@
 - System VM (eg: Virtual Box, VMware) virtualization of physical hardware, a software which provides a platform to run a whole OS
 - Program VM (eg: JVM) in order to run a single program, JVM runs byte code, which can be compiled by multiple high level programming languages, not only Java
 
-￼![jvmByteCodeImg](./imageDir/jvmByteCodeImg.png)
+￼![jvmByteCodeImg](imageDir/jvmByteCodeImg.png)
 
 
 
 
 ## HotSpot VM Topology
 
-￼![Image of classFileImg](./imageDir/classFileImg.png)
+￼![Image of classFileImg](imageDir/classFileImg.png)
 
 
 
